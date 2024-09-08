@@ -62,9 +62,9 @@ body {
 
 #igual {
     grid-row: span 2;
-    background-color: rgba(75, 40, 0, 0.63);
+    background-color: rgba(145, 1, 1, 0.747);
 }
 
 #igual:hover {
-    background-color: rgba(75, 40, 0, 0.877)
+    background-color: rgba(145, 1, 1, 0.904)
 }
