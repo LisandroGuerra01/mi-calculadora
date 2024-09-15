@@ -38,6 +38,8 @@ botones.forEach(boton => {
 
 let toggle = document.getElementById('toggle');
 let labelToggle = document.getElementById('label-toggle');
+let buttons = document.getElementsByClassName('btn');
+
 toggle.addEventListener('change', (event) => {
     let checked = event.target.checked;
     document.body.classList.add('body-dark-mode');
@@ -48,6 +50,10 @@ toggle.addEventListener('change', (event) => {
     if (checked) {
         labelToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
         labelToggle.style.color = 'rgb(248, 207, 153)';
+        Array.from(buttons).forEach(btn => {
+            btn.classList.add('btn-dark-mode');
+            btn.classList.remove('btn');
+        });
     } else {
         labelToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
         labelToggle.style.color = 'rgb(65, 122, 155)';
@@ -56,5 +62,9 @@ toggle.addEventListener('change', (event) => {
         document.getElementById('calculadora').classList.remove('calculadora-dark-mode');
         document.getElementById('pantalla').classList.add('pantalla');
         document.getElementById('pantalla').classList.remove('pantalla-dark-mode');
+        Array.from(buttons).forEach(btn => {
+            btn.classList.add('btn');
+            btn.classList.remove('btn-dark-mode');
+        });
     }
 })
