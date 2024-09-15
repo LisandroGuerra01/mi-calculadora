@@ -47,6 +47,8 @@ toggle.addEventListener('change', (event) => {
     document.getElementById('calculadora').classList.remove('calculadora');
     document.getElementById('pantalla').classList.add('pantalla-dark-mode');
     document.getElementById('pantalla').classList.remove('pantalla');
+    document.getElementById('igual').classList.add('btn-dark-mode');
+    document.getElementById('igual').classList.remove('btn');
     if (checked) {
         labelToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
         labelToggle.style.color = 'rgb(248, 207, 153)';
@@ -62,6 +64,8 @@ toggle.addEventListener('change', (event) => {
         document.getElementById('calculadora').classList.remove('calculadora-dark-mode');
         document.getElementById('pantalla').classList.add('pantalla');
         document.getElementById('pantalla').classList.remove('pantalla-dark-mode');
+        document.getElementById('igual').classList.add('btn');
+        document.getElementById('igual').Id.remove('btn-dark-mode');
         Array.from(buttons).forEach(btn => {
             btn.classList.add('btn');
             btn.classList.remove('btn-dark-mode');
