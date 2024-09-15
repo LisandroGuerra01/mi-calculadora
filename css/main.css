@@ -5,14 +5,28 @@
     font-family: sans-serif;
 }
 
-body {
+#toggle {
+    display: none;
+}
+
+#label-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Modo oscuro */
+.body-dark-mode {
     min-height: 100vh;
     background-color: #525252;
     display: grid;
     place-items: center;
+    transition: all 0.5s ease;
 }
 
-.calculadora {
+.calculadora-dark-mode {
     background-color: #1c5c1c;
     color: #c9c9c9;
     width: 300px;
@@ -22,9 +36,10 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: .2rem;
+    transition: all 0.5s ease;
 }
 
-.pantalla {
+.pantalla-dark-mode {
     grid-column: 1 / -1;
     background-color: #705e5ecc;
     padding: 1rem;
@@ -34,9 +49,10 @@ body {
     margin-bottom: .5rem;
     font-family: monospace;
     font-weight: 600;
+    transition: all 0.5s ease;
 }
 
-.btn {
+.btn-dark-mode {
     background-color: #221c5c48;
     color: #dddddd;
     border: 0;
@@ -48,11 +64,11 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn-dark-mode:hover {
     background-color: #221c5c8f;
 }
 
-.btn:active {
+.btn-dark-mode:active {
     background-color: #221c5cd7
 }
 
@@ -67,4 +83,80 @@ body {
 
 #igual:hover {
     background-color: rgba(145, 1, 1, 0.904)
+}
+
+#igual:active {
+    background-color: rgba(145, 1, 1, 0.555)
+}
+
+/* Modo claro */
+body {
+    min-height: 100vh;
+    background-color: #d6d6d6;
+    display: grid;
+    place-items: center;
+    transition: all 0.5s ease;
+}
+
+.calculadora {
+    background-color: #96c0d8;
+    color: #161616;
+    width: 300px;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .2rem;
+    transition: all 0.5s ease;
+}
+
+.pantalla {
+    grid-column: 1 / -1;
+    background-color: #bdbdbd;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    font-family: monospace;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.btn {
+    background-color: #7ea4b6;
+    color: #2e2e2e;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #5e7b88;
+}
+
+.btn:active {
+    background-color: #5e7b88a6
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+    background-color: #d6d0d4;
+}
+
+#igual:hover {
+    background-color: #d6d0d4ab;
+}
+
+#igual:active {
+    background-color: #d6d0d467;
 }

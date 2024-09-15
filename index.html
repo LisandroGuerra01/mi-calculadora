@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Calculadora</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
-    <div class="calculadora">
-        <div class="pantalla">0</div>
+    <label for="toggle" id="label-toggle"><i class="fa-solid fa-sun"></i></label>
+    <input type="checkbox" id="toggle">
+    <div id="calculadora" class="calculadora">
+        <div id="pantalla" class="pantalla">0</div>
         <button id="c" class="btn">C</button>
         <button id="borrar" class="btn">←</button>
         <button class="btn">/</button>
